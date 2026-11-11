@@ -19,6 +19,9 @@ from flask import Flask
 import time
 from aiogram.filters import CommandObject
 from aiogram.fsm.storage.base import StorageKey
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 
@@ -41,7 +44,7 @@ def run_flask():
 
 
 #переменные
-TOKEN = "8958441407:AAFZdgoKkyvDmk35vZ7gXnICyZ_OuGXjFQw"
+TOKEN = os.getenv("BOT_TOKEN")
 GROUP_ID = -1003005008797 
 ADMIN_ID = 1876083446
 bot = Bot(token=TOKEN)
